@@ -5,31 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fold&amp;Roll — Your pocket DM screen</title>
 <style>
-  :root { --purple: #5b21b6; --purple-dark: #3b1478; --gold: #c9a227; --ink: #1d1a24; --muted: #5c5666; }
-  * { box-sizing: border-box; }
-  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #faf9fc; line-height: 1.6; }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 4rem 1.25rem; text-align: center; }
-  .die { font-size: 3.5rem; color: var(--purple); line-height: 1; }
-  h1 { color: var(--purple-dark); font-size: 2.6rem; margin: .5rem 0 .25rem; }
-  .tagline { font-size: 1.15rem; color: var(--ink); margin: 0 0 .5rem; }
-  .desc { color: var(--muted); margin: 0 auto 2rem; max-width: 480px; }
-  .links { border-top: 3px solid var(--gold); padding-top: 1.5rem; }
-  .links a { display: inline-block; margin: 0 .75rem; color: var(--purple); font-weight: 600; text-decoration: none; border: 2px solid var(--purple); border-radius: 8px; padding: .55rem 1.2rem; }
-  .links a:hover { background: var(--purple); color: #fff; }
-  footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
+:root { --purple: #5b21b6; --purple-dark: #3b1478; --gold: #c9a227; --ink: #1d1a24; --muted: #5c5666; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #faf9fc; line-height: 1.6; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 4rem 1.25rem; text-align: center; }
+.die { font-size: 3.5rem; color: var(--purple); line-height: 1; }
+h1 { color: var(--purple-dark); font-size: 2.6rem; margin: .5rem 0 .25rem; }
+.tagline { font-size: 1.15rem; color: var(--ink); margin: 0 0 .5rem; }
+.desc { color: var(--muted); margin: 0 auto 2rem; max-width: 480px; }
+.links { border-top: 3px solid var(--gold); padding-top: 1.5rem; }
+.links a { display: inline-block; margin: 0 .75rem; color: var(--purple); font-weight: 600; text-decoration: none; border: 2px solid var(--purple); border-radius: 8px; padding: .55rem 1.2rem; }
+.links a:hover { background: var(--purple); color: #fff; }
+.newsletter { border-top: 3px solid var(--gold); padding-top: 1.5rem; margin: 0 auto 2rem; max-width: 480px; }
+.newsletter h2 { color: var(--purple-dark); font-size: 1.5rem; margin: 0 0 .5rem; }
+.newsletter .lead { color: var(--muted); margin: 0 auto 1.25rem; }
+.embeddable-buttondown-form { max-width: 400px; margin: 0 auto; text-align: left; }
+.embeddable-buttondown-form label { display: block; font-weight: 600; margin-bottom: .4rem; }
+.embeddable-buttondown-form input[type="email"] { width: 100%; padding: .6rem .8rem; font-size: 1rem; border: 2px solid var(--purple); border-radius: 8px; margin-bottom: .6rem; font-family: inherit; }
+.embeddable-buttondown-form input[type="submit"] { width: 100%; padding: .6rem 1.2rem; font-size: 1rem; font-weight: 600; color: #fff; background: var(--purple); border: 2px solid var(--purple); border-radius: 8px; cursor: pointer; font-family: inherit; }
+.embeddable-buttondown-form input[type="submit"]:hover { background: var(--purple-dark); border-color: var(--purple-dark); }
+.embeddable-buttondown-form p { font-size: .8rem; color: var(--muted); margin: .6rem 0 0; text-align: center; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="die">◆</div>
-  <h1>Fold&amp;Roll</h1>
-  <p class="tagline">Your pocket DM screen.</p>
-  <p class="desc">The tabletop RPG companion for iPhone and iPad — battle maps, instant dice, and a full DM screen, connected over your local network. No account. No subscription.</p>
-  <div class="links">
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-  <footer>Questions? <a href="mailto:kvnkillian@gmail.com" style="color:var(--purple)">kvnkillian@gmail.com</a></footer>
+<div class="die">◆</div>
+<h1>Fold&amp;Roll</h1>
+<p class="tagline">Your pocket DM screen.</p>
+<p class="desc">The tabletop RPG companion for iPhone and iPad — battle maps, instant dice, and a full DM screen, connected over your local network. No account. No subscription.</p>
+<div class="newsletter">
+<h2>The Fold&amp;Roll newsletter</h2>
+<p class="lead">Launch news and dev updates for the offline RPG companion. No spam, unsubscribe anytime.</p>
+<form action="https://buttondown.com/api/emails/embed-subscribe/foldandroll" method="post" class="embeddable-buttondown-form">
+<label for="bd-email">Enter your email</label>
+<input type="email" name="email" id="bd-email" />
+<input type="submit" value="Subscribe" />
+<p><a href="https://buttondown.com/refer/foldandroll" target="_blank">Powered by Buttondown.</a></p>
+</form>
+</div>
+<div class="links">
+<a href="support.html">Support</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+<footer>Questions? <a href="mailto:kvnkillian@gmail.com" style="color:var(--purple)">kvnkillian@gmail.com</a></footer>
 </div>
 </body>
 </html>
