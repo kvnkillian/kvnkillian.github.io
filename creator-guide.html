@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fold&Roll Creator Guide — Make & Sell D&D Homebrew Content Packs for Patrons</title>
+<meta name="description" content="The Fold&Roll creator guide: build homebrew monsters, spells and items, export encrypted patron packs, and share them through your own Patreon.">
+<link rel="canonical" href="https://kvnkillian.github.io/creator-guide.html">
+<style>
+:root { --purple: #5b21b6; --purple-dark: #3b1478; --gold: #c9a227; --ink: #1d1a24; --muted: #5c5666; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #faf9fc; line-height: 1.65; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+h1 { color: var(--purple-dark); font-size: 2.2rem; line-height: 1.2; margin: 0 0 .5rem; }
+.intro { color: var(--muted); border-bottom: 3px solid var(--gold); padding-bottom: 1.25rem; margin: 0 0 1.5rem; }
+.intro a, nav a { color: var(--purple); font-weight: 600; }
+.edition { color: var(--purple); text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: 700; margin: 0 0 1rem; }
+h2 { color: var(--purple-dark); font-size: 1.55rem; line-height: 1.3; margin: 2.2rem 0 .8rem; padding-bottom: .4rem; border-bottom: 2px solid var(--gold); }
+.sec-num { display: inline-block; background: var(--purple); color: #fff; border-radius: 6px; padding: 0 .45em; margin-right: .3em; font-size: .85em; vertical-align: .08em; }
+h3 { color: var(--purple-dark); font-size: 1.12rem; margin: 1.5rem 0 .4rem; }
+p { margin: .55rem 0; }
+ul, ol { margin: .55rem 0; padding-left: 1.5rem; }
+li { margin: .3rem 0; }
+nav { border-top: 3px solid var(--gold); margin-top: 2.5rem; padding-top: 1.25rem; color: var(--muted); font-size: .95rem; }
+nav a { text-decoration: none; margin-right: .9rem; }
+nav a:hover { text-decoration: underline; }
+a { color: var(--purple); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Fold&Roll Creator Guide</h1>
+<p class="intro">Fold&amp;Roll is a free D&amp;D companion app for iPhone and iPad (Android in beta) — no account, no subscription. <a href="https://apps.apple.com/us/app/fold-roll/id6822885522">Get Fold&amp;Roll on the App Store</a> · <a href="creator-guide.pdf">Download the PDF version</a></p>
+<p class="edition">Creator guide - October 2026 edition</p>
+<h2><span class="sec-num">1</span> Your Content, Your Patrons, Your Call</h2>
+<p>This guide is for creators - the people who make the monsters, spells, items, adventures, and classes that tables play with - who want their work playable inside Fold&amp;Roll.</p>
+<p>Here is the whole arrangement, up front:</p>
+<ul><li><strong>Your content stays yours.</strong> You own it, you price it, you sell it exactly as you do now. Fold&amp;Roll never hosts, sells, bundles, or redistributes your work - the app only <em>reads</em> a file.</li><li><strong>You distribute it yourself.</strong> You hand each patron a pack file and a key, through your own channels - a Patreon post, a message, your store. Your patrons keep paying <em>you</em>.</li><li><strong>Fold&amp;Roll takes nothing.</strong> No cut, no fee, no custody. There is no Fold&amp;Roll server in this system, no upload, no intake queue, no approval step. Everything runs on your machine and your patrons' devices - it all works with the Wi-Fi off.</li><li><strong>You can walk away any time.</strong> Nothing of yours lives in the app or with us. Stop issuing packs and nothing changes for anyone; packs already issued keep working forever.</li></ul>
+<p>The rest of this guide is the mechanics: how to turn your content into a pack, how to issue a copy to a patron, and what your patrons do with it.</p>
+<h2><span class="sec-num">2</span> What You Need</h2>
+<ul><li><strong>Fold&amp;Roll with Fold&amp;Roll+</strong> on your phone, tablet, or Mac. (Exporting a pack lives behind the one-time Fold&amp;Roll+ unlock; partner creators receive an unlock as part of onboarding.)</li><li><strong>Your Creator pass</strong> - a short signed code, issued to you personally, that reveals the Creator tools in the app. Section 8 covers entering it.</li><li><strong>The Pack Maker page</strong> - a single HTML file that makes per-patron copies of your packs. It comes <strong>from Fold&amp;Roll directly</strong> (Kevin sends it to partner creators). Never download a "Pack Maker" from anywhere else - the genuine tool is handed to you, and it works fully offline.</li><li><strong>Your content</strong> - either built in Fold&amp;Roll's Homebrew Workshop (Step 1) or converted from your existing catalogue (Step 2's shortcut).</li></ul>
+<p>Nothing else. No account to create, no dashboard, no developer tools.</p>
+<h2><span class="sec-num">3</span> Step 1 - Build Your Content</h2>
+<p>Open the <strong>Homebrew Workshop</strong> (part of Fold&amp;Roll+) and create your content with the built-in editors. Packs can hold any mix of the five kinds:</p>
+<ul><li><strong>Spells</strong></li><li><strong>Feats</strong></li><li><strong>Monsters</strong> (with their attacks)</li><li><strong>Items</strong></li><li><strong>Classes</strong> (with their features)</li></ul>
+<p>Build it the way your patrons will play it - the same editors you use are the ones your content appears in after import, so what you see is exactly what they get. Many creators keep a dedicated campaign or library as their "studio" copy.</p>
+<p><strong>Already have a catalogue?</strong> Skip ahead: the Pack Maker can convert existing files in bulk - see Step 2's shortcut. You can also mix both routes: convert the back catalogue, then polish individual entries in the editors.</p>
+<h2><span class="sec-num">4</span> Step 2 - Export Your Master Pack</h2>
+<p>Your <strong>master pack</strong> is the plain, unencrypted file everything else is made from.</p>
+<ol><li>Open the <strong>Homebrew Library</strong> and tap <strong>Export Pack</strong>.</li><li>Pick what goes in: your creations are listed with <strong>whole-row toggles</strong>. (Anything you previously <em>imported</em> appears locked - imported content can never be re-exported, including by you. That rule is the protection your own packs get on a patron's device.)</li><li>Set the <strong>pack name</strong>, your <strong>creator name</strong>, and a <strong>link</strong> (your Patreon, typically). The app remembers these for your next export.</li><li>Share the file out and keep it somewhere safe.</li></ol>
+<p><strong>The master is your source of truth.</strong> Keep it like you'd keep the master file of anything you sell. One caution: if you import your own master into a fresh library (say, a second device), those records arrive flagged as <em>imported</em> - playable, but locked against re-export there. The app can't tell "my own pack coming home" from "someone else's pack," so your library of originals plus the master file is what you export from.</p>
+<p><strong>Shortcut - converting an existing catalogue.</strong> Open the Pack Maker page and drop your files onto its <strong>single drop zone</strong> - any mix, any number at once. It converts what it recognizes into one plain pack:</p>
+<ul><li><strong>CSV templates</strong> - one simple spreadsheet per content type (blank templates are on the page).</li><li><strong>XML compendium files</strong> - the long-standing Fight Club / GM5 format, covering monsters, spells, and items in bulk.</li><li>Plain pack files merge straight in.</li></ul>
+<p>The page reports exactly what it read ("132 monsters · 41 spells") and anything it skipped, <strong>with the row and the reason</strong> - nothing is ever silently dropped. Fix stragglers in the editors after import, or in the source file and re-convert.</p>
+<h2><span class="sec-num">5</span> Step 3 - Your Key Card</h2>
+<p>The first time you use the Pack Maker, it generates your <strong>creator key card</strong>: one secret, made once, kept by you. From then on, the Pack Maker asks you to paste it in at the start of each session - it is never stored anywhere.</p>
+<p>Everything else in the system is <em>derived</em> from that card on demand:</p>
+<ul><li>Every patron's unlock key is derived from your card, the pack, and the patron's label.</li><li>Every pack's fingerprint tag is derived the same way.</li></ul>
+<p>That design is deliberate: <strong>there is no key database to lose, leak, or hand over.</strong> Re-issuing a patron's key months later means typing their label again and getting the identical key back.</p>
+<p><strong>Guard the card like a password</strong> - a password manager is the right home for it. If you lose it, packs your patrons already imported keep working untouched, but you can't issue new copies or resolve fingerprint tags until you start over with a new card (and new patron copies). The Pack Maker says this once, plainly, at the top of the page - it's the one warning that matters.</p>
+<h2><span class="sec-num">6</span> Step 4 - Make a Patron's Copy</h2>
+<p>This is the step you'll repeat. It takes about a minute:</p>
+<ol><li>Open the <strong>Pack Maker</strong> page (it works offline, in any browser).</li><li>Paste your <strong>key card</strong> for the session.</li><li>Drop in your <strong>master pack</strong> file.</li><li>Type the <strong>patron's label</strong> - whatever you know them by. Their Patreon username is the natural choice.</li><li>Tap <strong>Make this patron's pack</strong>.</li></ol>
+<p>You get two things:</p>
+<ul><li><strong>The patron's `.frpack` file</strong> - your pack, encrypted for that patron, carrying an invisible fingerprint tag derived from their label.</li><li><strong>Their key</strong> - copyable text. It's long by design (52 characters, in groups); patrons paste it once and never see it again. The app doesn't store keys, and neither should they need to.</li></ul>
+<p>Send both to the patron through your own channel - a Patreon post for the tier, a direct message, your usual delivery. What to tell them is the whole of the next section; most creators paste it once into the post that delivers the pack.</p>
+<h2><span class="sec-num">7</span> What Your Patrons Do</h2>
+<p>Give your patrons these steps verbatim if you like:</p>
+<ol><li>Save the <strong>`.frpack` file</strong> and the <strong>key</strong> your creator sent you.</li><li>In Fold&amp;Roll, open the <strong>Homebrew Library</strong> and tap <strong>Import Pack</strong>.</li><li>Pick the file. The app shows the pack's name and creator, and says it's locked.</li><li><strong>Paste the key</strong> and tap <strong>Unlock &amp; Import</strong>.</li><li>The confirmation screen shows what's inside - tap <strong>Import</strong>. Done: the content is in your Homebrew library, playable like anything you made yourself.</li></ol>
+<p>Good to know, for their questions:</p>
+<ul><li><strong>Wrong key?</strong> The app says so on the same screen and they can retry as often as needed - nothing is damaged and nothing partial is imported.</li><li><strong>Updated pack?</strong> When you issue a revised version, they import it the same way and choose <strong>Replace the previous copy</strong> - your new version cleanly supersedes the old one, with no duplicates.</li><li><strong>Lost key?</strong> They ask you. You re-derive it from their label in seconds (Step 3) - nothing was ever stored on their device or anywhere else.</li><li><strong>Managing packs:</strong> the Library's <strong>Imported Packs</strong> list shows every pack they have, and <strong>Remove this pack</strong> takes one out completely.</li><li><strong>One honest limit:</strong> content from a pack can be played and even edited on their device, but it <strong>can't be re-exported</strong> - that's deliberate, and it's the same protection your pack gets everywhere. See Section 9.</li></ul>
+<h2><span class="sec-num">8</span> Your Creator Pass & the Creator Hub</h2>
+<p>Your <strong>Creator pass</strong> is how the app knows this device belongs to a creator. It's a short signed code with your name in it - issued personally, verified entirely on-device, no account and no server check.</p>
+<p><strong>To enter it:</strong></p>
+<ol><li>On the app's main menu (role select), tap the <strong>version footer</strong> at the bottom. This opens the <strong>Creator Access</strong> sheet - it's deliberately quiet; there's no menu item hunting for it.</li><li><strong>Paste your pass</strong> into the field, or tap <strong>Scan QR</strong> and point the camera at the code you were given.</li><li>A valid pass closes the sheet - and from then on a <strong>Creator</strong> card sits on the main menu, above Dungeon Master.</li></ol>
+<p><strong>The Creator Hub</strong> (behind that card) gathers your tools in one place:</p>
+<ul><li><strong>Create / Export a Pack</strong> - the Step 2 flow, surfaced directly.</li><li><strong>Imported Packs</strong> - the packs on this device, with pack-level removal.</li><li><strong>Pack Maker help</strong> - what the page is and where the genuine one comes from.</li><li><strong>Creator Access status</strong> - whose pass this device holds, and a <strong>Hide Creator button</strong> option if you ever want it gone.</li></ul>
+<p>A leaked pass names its creator - each one is signed to a person - and a future app update can retire a specific pass. Passes control <em>visibility only</em>: everything underneath keeps its normal rules, so the hub feels like part of the app, not a back door bolted onto it.</p>
+<h2><span class="sec-num">9</span> Protection, Honestly</h2>
+<p>You deserve the straight version of what this does and doesn't do.</p>
+<p><strong>What's protected:</strong></p>
+<ul><li><strong>Every copy is encrypted for one patron.</strong> The `.frpack` file on its own is useless to anyone else - it opens only with that patron's key, pasted in the app.</li><li><strong>Every copy is fingerprinted.</strong> A leaked file carries its buyer's invisible tag. Hand the file (or its tag) to the Pack Maker with your key card, re-type a label, and it tells you whose copy leaked. Think of it as <strong>protected like your PDFs - plus traceable.</strong></li><li><strong>Content can't walk out of the app.</strong> Imported content is locked against re-export at every tier, permanently. There's no "export someone's pack" button to abuse - on your patrons' devices, and on yours.</li></ul>
+<p><strong>What isn't claimed:</strong></p>
+<ul><li>No system is unpiratable, and we won't tell you this one is. A determined person can photograph a screen or retype a stat block by hand; that's true of PDFs, books, and every format your work already ships in. What's changed is that casual sharing stops working, and a real leak points back at its source.</li></ul>
+<p>That combination - encrypted, fingerprinted, non-exportable - is the same deal we describe in our pitch, because it's the deal you actually get.</p>
+<h2><span class="sec-num">10</span> House Rules & FAQ</h2>
+<p><strong>The house rules are short:</strong></p>
+<ul><li><strong>Original content only.</strong> Your pack must be <em>your</em> work to give. Content derived from someone else's protected work can't go in a pack with Fold&amp;Roll's name anywhere near it.</li><li><strong>Your price is yours.</strong> Fold&amp;Roll never undercuts, discounts, or bundles your work, and never becomes a cheaper way to get it - your patrons buy from you, at your price, always.</li><li><strong>No lock-in, either direction.</strong> You owe Fold&amp;Roll nothing and Fold&amp;Roll holds nothing of yours. Leave whenever; take everything with you - there's nothing here to take back.</li></ul>
+<p><strong>FAQ</strong></p>
+<ul><li><em>Does Fold&amp;Roll take a cut of my pack sales?</em> No. There is no sale inside Fold&amp;Roll. You sell; the app reads a file.</li><li><em>Do I upload my pack anywhere?</em> No. There is nowhere to upload it to. You keep the master; patrons get copies from you.</li><li><em>Can I test a pack before sending it?</em> Yes - make a patron copy under your own label and import it into your own app with that key. The full loop takes about a minute and works in airplane mode.</li><li><em>A patron says the key doesn't work.</em> Almost always a trimmed paste. Have them copy the whole key again; if it still fails, re-derive it from their label (Step 3) and compare - you can regenerate their exact key and their exact pack at any time.</li><li><em>I lost my key card.</em> Patrons who already imported are unaffected. You'll generate a new card and issue fresh copies going forward - which is why the card belongs in a password manager.</li><li><em>What does a patron need to buy?</em> Fold&amp;Roll itself is a free download. Partner packs are built for tables already using the app; the import steps in Section 7 are all they ever see.</li><li><em>Who do I ask for help?</em> Kevin, directly - the same person who sent you the Pack Maker and your pass. There is no support queue and no ticket system; that's the point of zero footprint.</li></ul>
+<p><em>Fold&amp;Roll Creator Guide - October 2026 edition. Current app as of October 2026 (version 1.3.0).</em></p>
+<nav><a href="/">Home</a><a href="dm-guide.html">DM Guide</a><a href="player-guide.html">Player Guide</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+</div>
+</body>
+</html>
