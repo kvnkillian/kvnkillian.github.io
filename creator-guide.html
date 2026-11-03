@@ -42,6 +42,14 @@
         "@type": "Answer",
         "text": "Every patron's copy is encrypted and carries an invisible fingerprint tag derived from their label, so if a copy leaks, the tag identifies its source."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Do my homebrew monsters need a Challenge Rating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — but new in 1.4, you can set a CR in the monster editor (fractions included, up to 30) and the monster's XP is derived from the same encounter math the app uses at the table, so encounters built from your pack price your monsters correctly."
+      }
     }
   ]
 }
@@ -72,7 +80,7 @@ a { color: var(--purple); }
 <h1>Fold&Roll Creator Guide</h1>
 <p class="intro">Fold&amp;Roll is a free D&amp;D companion app for iPhone and iPad (Android in beta) — no account, no subscription. <a href="https://apps.apple.com/us/app/fold-roll/id6822885522">Get Fold&amp;Roll on the App Store</a> · <a href="creator-guide.pdf">Download the PDF version</a></p>
 <p>If you make D&amp;D homebrew — monsters, spells, items, feats, even full classes — this guide shows how to package your work as encrypted packs, fingerprinted for each patron, and sell them through your own Patreon or shop. Fold&amp;Roll never hosts, sells, or redistributes creator content and takes no cut of your sales; the app only reads the pack file on your patron's device.</p>
-<p class="edition">Creator guide - October 2026 edition</p>
+<p class="edition">Creator guide - November 2026 edition (version 1.4)</p>
 <h2><span class="sec-num">1</span> Your Content, Your Patrons, Your Call</h2>
 <p>This guide is for creators - the people who make the monsters, spells, items, adventures, and classes that tables play with - who want their work playable inside Fold&amp;Roll.</p>
 <p>Here is the whole arrangement, up front:</p>
@@ -85,6 +93,7 @@ a { color: var(--purple); }
 <p>Open the <strong>Homebrew Workshop</strong> (part of Fold&amp;Roll+) and create your content with the built-in editors. Packs can hold any mix of the five kinds:</p>
 <ul><li><strong>Spells</strong></li><li><strong>Feats</strong></li><li><strong>Monsters</strong> (with their attacks)</li><li><strong>Items</strong></li><li><strong>Classes</strong> (with their features)</li></ul>
 <p>Build it the way your patrons will play it - the same editors you use are the ones your content appears in after import, so what you see is exactly what they get. Many creators keep a dedicated campaign or library as their "studio" copy.</p>
+<p><strong>Monsters carry a Challenge Rating now (new in 1.4).</strong> Set a monster's CR in the editor - the full table, fractions included, up to 30 - and its XP comes straight from the same encounter math the app uses at the table, so encounters your patrons build from your pack price your monsters correctly. Monsters you made before 1.4 keep working exactly as they did; give one a CR the next time you edit it and its XP follows.</p>
 <p><strong>Already have a catalogue?</strong> Skip ahead: the Pack Maker can convert existing files in bulk - see Step 2's shortcut. You can also mix both routes: convert the back catalogue, then polish individual entries in the editors.</p>
 <h2><span class="sec-num">4</span> Step 2 - Export Your Master Pack</h2>
 <p>Your <strong>master pack</strong> is the plain, unencrypted file everything else is made from.</p>
@@ -129,7 +138,7 @@ a { color: var(--purple); }
 <ul><li><strong>Original content only.</strong> Your pack must be <em>your</em> work to give. Content derived from someone else's protected work can't go in a pack with Fold&amp;Roll's name anywhere near it.</li><li><strong>Your price is yours.</strong> Fold&amp;Roll never undercuts, discounts, or bundles your work, and never becomes a cheaper way to get it - your patrons buy from you, at your price, always.</li><li><strong>No lock-in, either direction.</strong> You owe Fold&amp;Roll nothing and Fold&amp;Roll holds nothing of yours. Leave whenever; take everything with you - there's nothing here to take back.</li></ul>
 <p><strong>FAQ</strong></p>
 <ul><li><em>Does Fold&amp;Roll take a cut of my pack sales?</em> No. There is no sale inside Fold&amp;Roll. You sell; the app reads a file.</li><li><em>Do I upload my pack anywhere?</em> No. There is nowhere to upload it to. You keep the master; patrons get copies from you.</li><li><em>Can I test a pack before sending it?</em> Yes - make a patron copy under your own label and import it into your own app with that key. The full loop takes about a minute and works in airplane mode.</li><li><em>A patron says the key doesn't work.</em> Almost always a trimmed paste. Have them copy the whole key again; if it still fails, re-derive it from their label (Step 3) and compare - you can regenerate their exact key and their exact pack at any time.</li><li><em>I lost my key card.</em> Patrons who already imported are unaffected. You'll generate a new card and issue fresh copies going forward - which is why the card belongs in a password manager.</li><li><em>What does a patron need to buy?</em> Fold&amp;Roll itself is a free download. Partner packs are built for tables already using the app; the import steps in Section 7 are all they ever see.</li><li><em>Who do I ask for help?</em> Kevin, directly - the same person who sent you the Pack Maker and your pass. There is no support queue and no ticket system; that's the point of zero footprint.</li></ul>
-<p><em>Fold&amp;Roll Creator Guide - October 2026 edition. Current app as of October 2026 (version 1.3.0).</em></p>
+<p><em>Fold&amp;Roll Creator Guide - November 2026 edition. Current app as of November 2026 (version 1.4).</em></p>
 <h2>Frequently asked questions</h2>
 <h3>Can I sell my D&amp;D homebrew content?</h3>
 <p>Yes — you package your homebrew as an encrypted pack and distribute it through your own Patreon or shop, at your own price. Fold&amp;Roll only reads the file on your patron's device.</p>
@@ -139,7 +148,9 @@ a { color: var(--purple); }
 <p>Yes — importing a partner pack is a Fold&amp;Roll+ feature. Fold&amp;Roll+ is a one-time $14.99 unlock, not a subscription.</p>
 <h3>How are packs protected?</h3>
 <p>Every patron's copy is encrypted and carries an invisible fingerprint tag derived from their label, so if a copy leaks, the tag identifies its source.</p>
-<nav><a href="/">Home</a><a href="dm-guide.html">DM Guide</a><a href="player-guide.html">Player Guide</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+<h3>Do my homebrew monsters need a Challenge Rating?</h3>
+<p>No — but new in 1.4, you can set a CR in the monster editor (fractions included, up to 30) and the monster's XP is derived from the same encounter math the app uses at the table, so encounters built from your pack price your monsters correctly.</p>
+<nav><a href="/">Home</a><a href="dm-guide.html">DM Guide</a><a href="player-guide.html">Player Guide</a><a href="wiki.html">Wiki</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
 </div>
 </body>
 </html>

@@ -42,6 +42,14 @@
         "@type": "Answer",
         "text": "When you have the XP, the level-up wizard walks the whole thing — ASIs, subclass picks, multiclassing and HP — in about a minute, and your sheet updates itself."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I follow the battle on my Apple Watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — new in 1.4, the Fold&Roll Apple Watch app shows your table, whose turn it is, the round, your HP, and how many turns until yours. A Live Activity on your phone counts down to your turn, too."
+      }
     }
   ]
 }
@@ -74,7 +82,7 @@ a { color: var(--purple); }
 <p>This guide is for players who want their D&amp;D 5e character sheet living on their phone: building a character and running the sheet session to session, a spellbook with spell cards, leveling up without the paperwork, and battle mode with your weapons and dice ready to roll. Fold&amp;Roll supports both the 2014 (SRD 5.1) and 2024 (SRD 5.2) rules, exports your character as a themed PDF, and lets you join your DM's table — in the room or online — from your own device.</p>
 <h2>Welcome</h2>
 <p>Fold&amp;Roll is your companion for tabletop roleplaying in the 5th-edition tradition. Your character, spellbook, dice, battle tools, and table connection all live on your phone - no account and no internet needed at the table. Cloud Sync is optional, with Fold&amp;Roll+.</p>
-<p>This October 2026 edition covers the current app: persistent table sessions, Called Actions from your DM, Table Chat, spell-learning caps, Wild Shape, the new battle layout on wide screens, effect durations in battle, and deeper compendium search - plus what has arrived since: <strong>Real Dice</strong> for your own physical dice (1.2.0), and <strong>Telepathic Bond</strong> online tables and the built-in <strong>How to Play D&amp;D</strong> guide (1.3.0).</p>
+<p>This November 2026 edition covers the current app: persistent table sessions, Called Actions from your DM, Table Chat, spell-learning caps, Wild Shape, the new battle layout on wide screens, effect durations in battle, and deeper compendium search - plus what has arrived since: <strong>Real Dice</strong> for your own physical dice (1.2.0), and <strong>Telepathic Bond</strong> online tables and the built-in <strong>How to Play D&amp;D</strong> guide (1.3.0), and the 1.4 additions in the <strong>New in 1.4</strong> section near the end: the Apple Watch app, the Live Activity countdown, the spoken battle map, the Ready action, and staged Real Dice.</p>
 <p>Keep this guide to hand for your first few sessions. After that, the Quick Reference at the end is all most players need.</p>
 <h2>How to Play D&D</h2>
 <p><strong>New in 1.3.0 - and free.</strong> Fold&amp;Roll now carries a complete <strong>How to Play D&amp;D</strong> guide inside the app: <strong>27 topics</strong> that teach the game itself, from building your first character to checks, saves, and how combat actually runs - with DMing covered too, for the day you end up behind the screen.</p>
@@ -171,7 +179,14 @@ a { color: var(--purple); }
 <p><strong>What stays free.</strong> The full character sheet, spellbook, dice, battle, table sessions, Called Actions, and <strong>all of Table Chat</strong> work without Fold&amp;Roll+. The free tier holds 6 characters and 2 campaigns, allows 1 variant per character, and includes 5 free JSON exports.</p>
 <h2>Quick Reference</h2>
 <ul><li><strong>Create a character</strong> - Roster - New Character - fill the form - Create (needs a class; free: 6 max)</li> <li><strong>Instant random character</strong> - Roster - Create Random Character (finished character - spells and backstory - in one tap)</li> <li><strong>Spend a class resource</strong> - Tap the resource's box (Ki, Rage, Wild Shape...)</li> <li><strong>Wild Shape</strong> - Druid - Wild Shape box - pick a filtered form; excess damage carries over at 0 beast HP</li> <li><strong>Learn a spell</strong> - Spellbook - + - tap to learn (count cap + spell-level gate; old spells never removed)</li> <li><strong>Cast / upcast</strong> - Spell row - pick a slot (higher slot = upcast) - Cast</li> <li><strong>Zone spell</strong> - Cast it - place the area on the map in the cast flow (stays while you concentrate)</li> <li><strong>Dispel an effect</strong> - Cast Dispel Magic - pick the effect (base level automatic; upcast rolls)</li> <li><strong>Level up</strong> - Sheet - "Level Up to N!" - follow the wizard</li> <li><strong>Multiclass</strong> - Level-up - "Take a level in another class" (needs 13+ in key abilities)</li> <li><strong>Rest</strong> - Sheet - Rests - Short Rest or Long Rest (8 hours)</li> <li><strong>Join a table</strong> - Character - Table tab - Join Table (session persists until Leave Table)</li> <li><strong>Connection dropped</strong> - Wait - auto-reconnect tries for about a minute - or Cancel, then rejoin</li> <li><strong>Quick Rolls in battle (wide)</strong> - Bottom-right quadrant (map above it): Battle Actions, checks/saves, Passive Perception, history pinned at the foot</li> <li><strong>Move your token</strong> - Tap token to select - tap an empty cell (selection stays; tap token again to deselect)</li> <li><strong>Quick Rolls in battle (narrow)</strong> - Tap Quick Rolls to open the dialog</li> <li><strong>Critical damage</strong> - Nat 20 on Attack - Damage button turns gold - tap it for the one crit roll</li> <li><strong>Attack from the map</strong> - Tap enemy token - targeted attack dialog - wait for DM verdict</li> <li><strong>Heal from the map</strong> - Tap ally (or your own) token - heal dialog</li> <li><strong>Answer a DM call</strong> - Alert appears - read the note - Roll (initiative fills the tracker) or Dismiss</li> <li><strong>Import a content pack</strong> - Homebrew Library - Import Pack - pick the file (encrypted packs: paste the key your creator gave you)</li> <li><strong>Party-only chat</strong> - Chat tab - Party (the DM cannot see it)</li> <li><strong>Private chat</strong> - Chat tab - DM (you + DM) or Direct (you + one player)</li> <li><strong>Secret roll</strong> - Dice tray - Secret on - roll (never leaves your device)</li> <li><strong>Buy from a shop</strong> - Shop auto-opens - Buy (or Haggle)</li> <li><strong>Resolve a sync conflict</strong> - Cloud Sync screen - Restore or Discard the parked older copy (+ only)</li> <li><strong>Print my character</strong> - Toolbar - Export PDF</li></ul>
-<p><em>Fold&amp;Roll Player Guide - October 2026 (version 1.3.0)</em></p>
+<p><em>Fold&amp;Roll Player Guide - November 2026 (version 1.4)</em></p>
+<h2>New in 1.4</h2>
+<p>Version 1.4 mostly grows the battle around you — new screens, new alerts, and a map that can speak.</p>
+<p><strong>The battle on your wrist</strong> — the Apple Watch app follows your table: whose turn it is, the round, your HP, and how many turns until yours. It is a window, not a controller — actions still happen on your phone.</p>
+<p><strong>A countdown to your turn</strong> — online, a Live Activity keeps the fight on your lock screen: <em>You're up next</em>, or <em>Your turn in N turns</em>, plus a turn alert when the moment arrives. And when your initiative roll lands, the app takes you straight to the battle.</p>
+<p><strong>The spoken battle map</strong> — a screen-reader rendering of the same fight: every token spoken by its coordinates (like "D5"), walked in initiative order, with rotors for allies, enemies, and spell zones. Same fog, same secrets.</p>
+<p><strong>The Ready action</strong> — on your turn, declare a Ready (an attack, a spell, or a move); when your trigger happens, you act and spend your reaction.</p>
+<p><strong>Real Dice, staged</strong> — physical-dice entry now covers targeted attacks too, entered die by die and committed only when it's right.</p>
 <h2>Frequently asked questions</h2>
 <h3>Is there a D&amp;D character sheet app that works offline?</h3>
 <p>Yes — Fold&amp;Roll stores your character sheet on your own device, so it works fully offline: no account and no signal needed at the table.</p>
@@ -181,7 +196,9 @@ a { color: var(--purple); }
 <p>Yes — themed PDF export, spell cards included, is free for everyone in Fold&amp;Roll.</p>
 <h3>How does leveling up work?</h3>
 <p>When you have the XP, the level-up wizard walks the whole thing — ASIs, subclass picks, multiclassing and HP — in about a minute, and your sheet updates itself.</p>
-<nav><a href="/">Home</a><a href="dm-guide.html">DM Guide</a><a href="creator-guide.html">Creator Guide</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+<h3>Can I follow the battle on my Apple Watch?</h3>
+<p>Yes — new in 1.4, the Fold&amp;Roll Apple Watch app shows your table, whose turn it is, the round, your HP, and how many turns until yours. A Live Activity on your phone counts down to your turn, too.</p>
+<nav><a href="/">Home</a><a href="dm-guide.html">DM Guide</a><a href="creator-guide.html">Creator Guide</a><a href="wiki.html">Wiki</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
 </div>
 </body>
 </html>
