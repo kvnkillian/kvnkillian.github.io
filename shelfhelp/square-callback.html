@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shelf Help Yourself - returning to the app</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // Square requires an HTTPS OAuth redirect URL; this static
+  // page is the whole bridge. It forwards the callback (the
+  // authorization code + state, or an error) to the Shelf Help
+  // Yourself app's custom scheme and keeps nothing. The code
+  // is worthless without the PKCE verifier, which never
+  // leaves the shop's device.
+  (function () {
+    var target = "shelfhelp://square-callback" + window.location.search;
+    window.location.replace(target);
+  })();
+</script>
+</head>
+<body>
+<p>Returning to Shelf Help Yourself&hellip; If the app does not open,
+you can close this page and try connecting again from Settings.</p>
+</body>
+</html>
