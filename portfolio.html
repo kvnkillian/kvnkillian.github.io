@@ -10,130 +10,200 @@
 <meta property="og:title" content="Kevin Killian — Shipping software with AI agents">
 <meta property="og:description" content="I direct AI coding agents to build and ship production software. The apps below are the receipts.">
 <meta property="og:url" content="https://kvnkillian.github.io/portfolio.html">
-  <meta property="og:image" content="https://kvnkillian.github.io/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+<meta property="og:image" content="https://kvnkillian.github.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-  :root { --ink: #1d1a24; --muted: #5c5666; --accent: #1f4d3a; --accent-dark: #143527; --rule: #c9a227; }
+  :root {
+    --ink: #1d1a24;
+    --muted: #5c5666;
+    --accent: #1f4d3a;
+    --accent-dark: #143527;
+    --rule: #c9a227;
+    --card: #ffffff;
+    --wash: #f1efe8;
+    --line: #ddd6e6;
+  }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #faf9fc; line-height: 1.65; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
-  header { border-bottom: 3px solid var(--rule); padding-bottom: 1.25rem; margin-bottom: 1.75rem; }
-  h1 { color: var(--accent-dark); margin: 0 0 .5rem; font-size: 2.1rem; line-height: 1.25; }
-  .sub { color: var(--muted); margin: 0; font-size: 1.1rem; }
-  h2 { color: var(--accent); font-size: 1.25rem; margin: 2.25rem 0 .5rem; }
-  p, li { font-size: 1rem; }
-  ul { padding-left: 1.25rem; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: #faf9fc;
+    line-height: 1.65;
+  }
   a { color: var(--accent); }
-  .howto { background: #f1efe8; border-left: 4px solid var(--rule); padding: 1rem 1.25rem; margin: 1.5rem 0; }
-  .howto p { margin: .35rem 0; }
-  .app { margin: 0 0 1.1rem; }
-  .app strong { font-size: 1.05rem; }
-  .status { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--accent-dark); background: #e6efe9; border-radius: 4px; padding: .1rem .45rem; margin-left: .4rem; vertical-align: middle; }
+  a:focus-visible { outline: 3px solid var(--rule); outline-offset: 2px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+
+  header { border-bottom: 3px solid var(--rule); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+  .byline { color: var(--muted); font-size: 1rem; margin: 0 0 .5rem; }
+  h1 { color: var(--accent-dark); margin: 0 0 .75rem; font-size: 2.4rem; line-height: 1.2; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0; font-size: 1.15rem; max-width: 60ch; }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2.5rem;
+    margin: 1.5rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+  .stats p { margin: 0; font-size: 1rem; }
+  .stats strong { font-size: 1.5rem; color: var(--accent-dark); display: block; line-height: 1.2; }
+
+  h2 { color: var(--accent); font-size: 1.35rem; margin: 2.75rem 0 .25rem; }
+  .section-note { color: var(--muted); margin: 0 0 1.25rem; }
+
+  .howto { margin: 1.25rem 0; }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .steps li { background: var(--wash); padding: 1.25rem 1.25rem 1.5rem; }
+  .steps .num { display: block; color: var(--accent); font-weight: 700; font-size: 1.5rem; line-height: 1; margin-bottom: .5rem; }
+  .steps strong { font-size: 1.05rem; }
+  .steps p { margin: .25rem 0 0; }
+
+  .apps { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0 0; }
+  .app {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+    padding: 1.25rem 1.25rem 1.35rem;
+  }
+  .app h3 { margin: 0 0 .35rem; font-size: 1.1rem; }
+  .app p { margin: 0; font-size: .98rem; }
+  .app p.links { margin-top: .75rem; }
+  .status {
+    display: inline-block;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    background: #e6efe9;
+    border-radius: 4px;
+    padding: .1rem .45rem;
+    margin-left: .4rem;
+    vertical-align: middle;
+  }
   .status.build { background: #f3ead0; color: #6b5510; }
   .status.proto { background: #ececf1; color: var(--muted); }
-  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd6e6; color: var(--muted); font-size: .9rem; }
+
+  .cta {
+    background: var(--accent-dark);
+    color: #f4f2ec;
+    padding: 2rem 1.75rem;
+    margin-top: 3rem;
+  }
+  .cta h2 { color: #ffffff; margin: 0 0 .5rem; }
+  .cta p { margin: 0 0 1.25rem; max-width: 58ch; }
+  .cta a.button {
+    display: inline-block;
+    background: var(--rule);
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: none;
+    padding: .65rem 1.25rem;
+    border-radius: 4px;
+  }
+  .cta a.button:hover, .cta a.button:focus-visible { background: #d9b73c; }
+
+  footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
   footer a { margin-right: 1rem; }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 1.9rem; }
+    .steps, .apps { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
+    <p class="byline">Kevin Killian — Enterprise Applications Architect</p>
     <h1>I ship production software by directing AI agents.</h1>
-    <p class="sub">Kevin Killian — enterprise applications, built the way teams will work next.</p>
+    <p class="sub">AI tools are easy to try. Shipping with them is the hard part. I write the spec, direct the agents, verify everything they produce, and ship what passes. The apps below are the receipts — real software, through App Store review, in real users' hands.</p>
+    <div class="stats">
+      <p><strong>2</strong> live on the App Store</p>
+      <p><strong>7</strong> built and in testing</p>
+      <p><strong>1</strong> prototype</p>
+    </div>
   </header>
-
-  <p>AI tools are easy to try. Shipping with them is the hard part. I write the spec, direct the agents, verify everything they produce, and ship what passes. The apps below are the receipts — real software, through App Store review, in real users' hands.</p>
 
   <h2>How I work</h2>
   <div class="howto">
-    <p><strong>1. Spec first.</strong> Every build starts with a written spec: what it does, what it doesn't, and how I'll know it's done.</p>
-    <p><strong>2. Direct, don't delegate blindly.</strong> Agents build in small, verifiable passes. I set the direction; they do the typing.</p>
-    <p><strong>3. Verify before it ships.</strong> Every build gets a build and test verdict — mine, on real devices — before it goes anywhere near a user.</p>
-    <p><strong>4. Ship it.</strong> App Store review, Google Play, real users, real feedback, next version.</p>
+    <ol class="steps">
+      <li><span class="num">1</span><strong>Spec first.</strong><p>Every build starts with a written spec: what it does, what it doesn't, and how I'll know it's done.</p></li>
+      <li><span class="num">2</span><strong>Direct, don't delegate blindly.</strong><p>Agents build in small, verifiable passes. I set the direction; they do the typing.</p></li>
+      <li><span class="num">3</span><strong>Verify before it ships.</strong><p>Every build gets a build and test verdict — mine, on real devices — before it goes anywhere near a user.</p></li>
+      <li><span class="num">4</span><strong>Ship it.</strong><p>App Store review, Google Play, real users, real feedback, next version.</p></li>
+    </ol>
   </div>
 
   <p>The discipline scales. The same loop — clear specs, agent direction, verification gates, shipping — is how enterprise teams should be running AI agents, and it's how I already work every day.</p>
 
   <h2>Live</h2>
-
-  <div class="app">
-    <p><strong>Fold&amp;Roll</strong> <span class="status">Live</span><br>
-    A 5e tabletop companion: battle maps, character sheets, spellbook, DM tools, and online tables. iOS 2.0 live on the App Store; Android 2.0.1 on Google Play (Closed Alpha). 10 languages. Fold&amp;Roll+ is a $14.99 one-time unlock. <a href="https://apps.apple.com/us/app/fold-roll/id6822885522">App Store</a></p>
-  </div>
-
-  <div class="app">
-    <p><strong>Cubby</strong> <span class="status">Live</span><br>
-    A baby-supply tracker that learns a household's pace and warns before it runs out — diapers, wipes, formula, milk. Local-first, no account, no tracking. Android live on Google Play (alpha); iOS 1.0 live on the App Store. <a href="cubby.html">About Cubby</a></p>
+  <p class="section-note">In users' hands now.</p>
+  <div class="apps">
+    <div class="app">
+      <h3>Fold&amp;Roll <span class="status">Live</span></h3>
+      <p>A 5e tabletop companion: battle maps, character sheets, spellbook, DM tools, and online tables. iOS 2.0 live on the App Store; Android 2.0.1 on Google Play (Closed Alpha). 10 languages. Fold&amp;Roll+ is a $14.99 one-time unlock.</p>
+      <p class="links"><a href="https://apps.apple.com/us/app/fold-roll/id6822885522">App Store</a></p>
+    </div>
+    <div class="app">
+      <h3>Cubby <span class="status">Live</span></h3>
+      <p>A baby-supply tracker that learns a household's pace and warns before it runs out — diapers, wipes, formula, milk. Local-first, no account, no tracking. Android live on Google Play (alpha); iOS 1.0 live on the App Store.</p>
+      <p class="links"><a href="cubby.html">About Cubby</a></p>
+    </div>
   </div>
 
   <h2>Built — in testing</h2>
-
-  <div class="app">
-    <p><strong>Shelf Help Yourself</strong> <span class="status build">Built</span><br>
-    Local-first inventory for small shops. No cloud account, no checkout — the shop's data stays the shop's.</p>
-  </div>
-
-  <div class="app">
-    <p><strong>Canister Player</strong> <span class="status build">Built</span><br>
-    A local-files-first media player. Your files, your library, no account.</p>
-  </div>
-
-  <div class="app">
-    <p><strong>Aircheck</strong> <span class="status build">Built</span><br>
-    A local-first podcast player with CarPlay audio. No account, no tracking.</p>
-  </div>
-
-  <div class="app">
-    <p><strong>AnyKey</strong> <span class="status build">Built</span><br>
-    A VNC viewer that turns a phone into a remote desktop for a Mac.</p>
-  </div>
-
-  <div class="app">
-    <p><strong>Cross My Mind</strong> <span class="status build">Built</span><br>
-    A puzzle hub — fourteen games behind one unlock.</p>
-  </div>
-
-  <div class="app">
-    <p><strong>The Closed Room</strong> <span class="status build">Built</span><br>
-    A mystery game built for a folding phone: the fold is the mechanic.</p>
-  </div>
-
-  <div class="app">
-    <p><strong>Last Call Inn</strong> <span class="status build">Built</span><br>
-    A tavern roguelike (Godot): run the inn, survive the night shift.</p>
+  <p class="section-note">Finished builds working toward release.</p>
+  <div class="apps">
+    <div class="app">
+      <h3>Shelf Help Yourself <span class="status build">Built</span></h3>
+      <p>Local-first inventory for small shops. No cloud account, no checkout — the shop's data stays the shop's.</p>
+    </div>
+    <div class="app">
+      <h3>Canister Player <span class="status build">Built</span></h3>
+      <p>A local-files-first media player. Your files, your library, no account.</p>
+    </div>
+    <div class="app">
+      <h3>Aircheck <span class="status build">Built</span></h3>
+      <p>A local-first podcast player with CarPlay audio. No account, no tracking.</p>
+    </div>
+    <div class="app">
+      <h3>AnyKey <span class="status build">Built</span></h3>
+      <p>A VNC viewer that turns a phone into a remote desktop for a Mac.</p>
+    </div>
+    <div class="app">
+      <h3>Last Call Inn <span class="status build">Built</span></h3>
+      <p>A tavern roguelike (Godot): run the inn, survive the night shift.</p>
+    </div>
+    <div class="app">
+      <h3>Haven <span class="status build">Built</span></h3>
+      <p>A reimagined Home Assistant experience — HomeView widgets and Siri shortcuts for lights, locks, climate, and scenes.</p>
+    </div>
+    <div class="app">
+      <h3>Mac Clinic <span class="status build">Built</span></h3>
+      <p>A Mac checkup and clean app — a short health quiz, Smart Scan, and plain-language cleanup verdicts.</p>
+    </div>
   </div>
 
   <h2>Prototypes</h2>
-
-  <div class="app">
-    <p><strong>Puddle Duck</strong> <span class="status proto">Prototype</span><br>
-    A SpriteKit water-play prototype.</p>
+  <p class="section-note">Earlier work, kept for reference.</p>
+  <div class="apps">
+    <div class="app">
+      <h3>SixTile <span class="status proto">Prototype</span></h3>
+      <p>A macOS utility that tiles the six frontmost windows into a 3&times;2 grid.</p>
+    </div>
   </div>
 
-  <div class="app">
-    <p><strong>Pour Puzzle</strong> <span class="status proto">Prototype</span><br>
-    A liquid-sorting puzzle, parked for now.</p>
+  <div class="cta">
+    <h2>Work with me</h2>
+    <p>If you're building a team that works with AI agents — or hiring someone who already does — I'd like to talk. I bring enterprise platform experience and a portfolio of shipped software to prove the method works.</p>
+    <a class="button" href="mailto:kvnkillian@gmail.com">Email Kevin</a>
   </div>
-
-  <div class="app">
-    <p><strong>Chart &amp; Blade</strong> <span class="status proto">Prototype</span><br>
-    A DS-style adventure prototype.</p>
-  </div>
-
-  <div class="app">
-    <p><strong>Twinfall</strong> <span class="status proto">Prototype</span><br>
-    A DS-style adventure prototype.</p>
-  </div>
-
-  <div class="app">
-    <p><strong>SixTile</strong> <span class="status proto">Prototype</span><br>
-    A macOS utility that tiles the six frontmost windows into a 3&times;2 grid.</p>
-  </div>
-
-  <h2>Work with me</h2>
-  <p>If you're building a team that works with AI agents — or hiring someone who already does — I'd like to talk. I bring enterprise platform experience and a portfolio of shipped software to prove the method works.</p>
 
   <footer>
     <a href="mailto:kvnkillian@gmail.com">kvnkillian@gmail.com</a>
